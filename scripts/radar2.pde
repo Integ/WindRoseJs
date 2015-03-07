@@ -1,0 +1,30 @@
+void setup() {
+    size(500,500);
+    stroke(0);
+    ellipseMode(CENTER);
+}
+void draw() {
+    stroke(0);
+    fill(255,128,0,64);
+//同心圆
+    background(#F0F0E0);
+    ellipse(width/2,height/2,100,100);
+    ellipse(width/2,height/2,200,200);
+    ellipse(width/2,height/2,300,300);
+    ellipse(width/2,height/2,400,400);
+//直线
+    line(width/2,height/2,width/2+200*sin(72*PI/180),height/2-200*cos(72*PI/180));
+    line(width/2,height/2,width/2+200*sin(72*2*PI/180),height/2-200*cos(72*2*PI/180));
+    line(width/2,height/2,width/2+200*sin(72*3*PI/180),height/2-200*cos(72*3*PI/180));
+    line(width/2,height/2,width/2+200*sin(72*4*PI/180),height/2-200*cos(72*4*PI/180));
+    line(width/2,height/2,width/2+200*sin(0),height/2-200*cos(0));
+//字符
+    fill(0);
+    textFont(createFont("Arial",24));
+    noLoop();
+    text("A",width/2+200*sin(0),height/2-200*cos(0));
+    text("B",width/2+200*sin(72*PI/180),height/2-200*cos(72*PI/180));
+    text("C",width/2+200*sin(72*2*PI/180),height/2-200*cos(72*2*PI/180));
+    text("D",width/2+200*sin(72*3*PI/180),height/2-200*cos(72*3*PI/180));
+    text("E",width/2+200*sin(72*4*PI/180),height/2-200*cos(72*4*PI/180));
+}
